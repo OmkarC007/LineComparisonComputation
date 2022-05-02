@@ -22,10 +22,19 @@ public class LineComparison {
         double lengthOfline2 = Math.sqrt(Math.pow((x22-x11),2) + Math.pow((y22-y11),2));
         System.out.println("length of line two is "+lengthOfline2);
 
-        if (lengthOfline1.equals(lengthOfline2)){
-            System.out.println("linea are equals");
+//        if (lengthOfline1.equals(lengthOfline2)){
+//            System.out.println("linea are equals");
+//        }else{
+//            System.out.println("linea are not equals");
+//        }
+//
+        int compareLines = lengthOfline1.compareTo(lengthOfline2);
+        if(compareLines == 0){
+            System.out.println("two lines are equals");
+        } else if (compareLines < 0) {
+            System.out.println("line two are greater than 1");
         }else{
-            System.out.println("linea are not equals");
+            System.out.println("line 1 is greater than 2");
         }
     }
 }
